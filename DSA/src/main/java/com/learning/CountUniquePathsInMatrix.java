@@ -4,6 +4,7 @@ public class CountUniquePathsInMatrix {
     //Count all possible paths from top left to bottom right of a mXn matrix
 /*    Time Complexity: O(M * N) – Due to nested for loops.
     Auxiliary Space: O(M * N) – We have used a 2D array of size M x N*/
+
     public static void countUniquePath(int m, int n) {
         int[][] count = new int[m][n];
 
