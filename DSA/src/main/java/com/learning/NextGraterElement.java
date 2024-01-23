@@ -17,13 +17,12 @@ public class NextGraterElement {
     }
     return arr1;
   }
-
   public static void main(String[] args) {
     int arr[] = {11, 13, 21, 3};
     int[] result = nextElement(arr, arr.length);
 
     for (int value : result) {
-      System.out.println(value + " ");
+      System.out.print(value + ",");
     }
   }
 }

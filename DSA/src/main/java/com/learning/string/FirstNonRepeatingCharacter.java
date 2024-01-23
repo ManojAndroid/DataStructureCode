@@ -1,6 +1,7 @@
 package com.learning.string;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstNonRepeatingCharacter {
@@ -24,7 +25,7 @@ public class FirstNonRepeatingCharacter {
   }
 
   public static char findFirstNonRepeatingCharacter(String s) {
-    Map<Character, Integer> charFrequency = new HashMap<>();
+    Map<Character, Integer> charFrequency = new LinkedHashMap<>();
 
     // Count the frequency of each character
     for (char c : s.toCharArray()) {
