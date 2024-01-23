@@ -48,7 +48,7 @@ public class CheckAnagram {
     String str2 = "armg";
 
     // Function call
-    if (areAnagram(str1, str2)) {
+    if (areAnagram(str1.toLowerCase(), str2.toLowerCase())) {
       System.out.print("The two strings are " +
           "anagram of each other");
     } else {

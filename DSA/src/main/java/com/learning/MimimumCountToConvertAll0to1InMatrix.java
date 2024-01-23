@@ -1,7 +1,6 @@
 package com.learning;
 
-public class NumberOfIslannds {
-
+public class MimimumCountToConvertAll0to1InMatrix {
     static int R;
     static int C;
 
@@ -13,7 +12,7 @@ public class NumberOfIslannds {
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
-                if (mat[i][j] == 1 && !visited[i][j]) {
+                if (mat[i][j] == 0 && !visited[i][j]) {
                     Dfs(mat, i, j, visited);
                     count++;
                 }
@@ -24,10 +23,10 @@ public class NumberOfIslannds {
 
     private static void Dfs(int[][] mat, int i, int j, boolean[][] visited) {
 
-        int[] nbrRow = {1, 1, 1, 0, -1, -1, -1, 0};
-        int[] nblClm = {1, 0, -1, -1, -1, 0, 1, 1};
+        int[] nbrRow = {1, -1, 0, 0};
+        int[] nblClm = {0, 0, 1, -1};
         visited[i][j] = true;
-        for (int k = 0; k < 8; k++) {
+        for (int k = 0; k < 4; k++) {
             if (isValid(i + nbrRow[k], j + nblClm[k], mat, visited)) {
                 Dfs(mat, i + nbrRow[k], j + nblClm[k], visited);
             }
@@ -37,16 +36,14 @@ public class NumberOfIslannds {
     }
 
     private static boolean isValid(int r, int c, int[][] mat, boolean[][] visited) {
-        return (r >= 0 && R > r && c >= 0 && C > c && mat[r][c] == 1 && !visited[r][c]);
+        return (r >= 0 && R > r && c >= 0 && C > c && mat[r][c] == 0 && !visited[r][c]);
     }
 
     public static void main(String[] args) {
-        int M[][] = new int[][]{{1, 1, 0, 0, 0},
-                {0, 1, 0, 0, 1},
-                {1, 0, 0, 1, 1},
-                {0, 0, 0, 0, 0},
-                {1, 0, 1, 0, 1}};
-        System.out.println("Number of islands is: " + countIsland(M));
+        int[][] grid = {{0, 1, 1, 0, 1},
+                {0, 1, 0, 1, 0},
+                {0, 0, 0, 0, 1},
+                {0, 0, 1, 0, 0}};
+        System.out.println("Number of islands is: " + countIsland(grid));//2
     }
-
 }
