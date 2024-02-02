@@ -1,59 +1,110 @@
 package com.learning.java8;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 
 public class Java8BasicQuestion {
 
-    static void iterateMapJava8(Map<String, String> map){
-        map.forEach((k,v)-> System.out.println(" java 8 Key: "+k+" Value: "+v));
+    static void iterateMapJava8(Map<String, Integer> map) {
+        map.forEach((k, v) -> System.out.println(" java 8 Key: " + k + " Value: " + v));
     }
 
-    static void iterateMapJavaNorma(Map<String, String> map){
+    static void iterateMapJavaNorma(Map<String, Integer> map) {
 
-        for(Map.Entry<String,String>  set: map.entrySet()){
-            System.out.println(" normal value: "+set.getKey()+"value: "+set.getValue());
+        for (Map.Entry<String, Integer> set : map.entrySet()) {
+            System.out.println(" normal value: " + set.getKey() + "value: " + set.getValue());
         }
     }
-    static void grouping(List<Student> list){
-        Map<String, List<Student>> result=list.stream().collect(groupingBy(student -> student.address));
-        result.forEach((k,v)-> {
-            System.out.println(" key: "+k);
-            v.forEach(student -> System.out.println("value:"+student.tostring()));
+
+    public static void sortByValue(Map<String, Integer> hm) {
+        // Create a list from elements of HashMap
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(hm.entrySet());
+        // Sort the list
+        Collections.sort(list, Map.Entry.comparingByValue());
+
+        // put data from sorted list to hashmap
+        HashMap<String, Integer> temp = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> aa : list) {
+            temp.put(aa.getKey(), aa.getValue());
+        }
+        for (Map.Entry<String, Integer> set : temp.entrySet()) {
+            System.out.println(" normal value: " + set.getKey() + "value: " + set.getValue());
+        }
+    }
+
+    static void grouping(List<Student> list) {
+        Map<String, List<Student>> result = list.stream().collect(Collectors.groupingBy(Student::getAddress));
+        result.forEach((k, v) -> {
+            System.out.println(" key: " + k);
+            v.forEach(student -> System.out.println("value:" + student.tostring()));
         });
     }
 
-    static void map(List<Student> list){
-        List<String> result=list.stream().map(data->data.address).collect(Collectors.toList());
+    static void map(List<Student> list) {
+        List<String> result = list.stream().map(Student::getAddress).collect(Collectors.toList());
         result.forEach(System.out::println);
     }
 
-    static void sum(List<Student> list){
-        int  sum=list.stream().collect(Collectors.summingInt(student -> student.age));
-        System.out.println("sum: "+sum);
+    static void flatMap() {
+        List<List<String>> listOfLists = Arrays.asList(Arrays.asList("One", "Two", "Three"), Arrays.asList("Four", "Five", "Six"));
+        // Using flatMap to flatten the lists of lists into a single list
+        List<String> flatList = listOfLists.stream().flatMap(List::stream).collect(Collectors.toList());
+        // Result: ["One", "Two", "Three", "Four", "Five", "Six"]
+    }
+
+    public static void convertListToMap() {
+        List<Student> people = new ArrayList<>();
+        people.add(new Student(1, "Alice", 25, "Address1"));
+        people.add(new Student(2, "Bob", 30, "Address2"));
+        people.add(new Student(4, "Charlie", 35, "Address3"));
+        // Convert the list to a Map with ID as key and Address as value
+        Map<Integer, String> studentAddressMap = people.stream().collect(Collectors.toMap(Student::getId, Student::getAddress));
+    }
+
+    static void sortMapBasedOnValue() {
+        Map<String, Integer> unsortedMap = new HashMap<>();
+        unsortedMap.put("Alice", 30);
+        unsortedMap.put("Bob", 25);
+        unsortedMap.put("Charlie", 35);
+        unsortedMap.put("David", 28);
+
+        // Sort the Map by values in ascending order
+        Map<String, Integer> sortedMapAsc = unsortedMap.entrySet().stream().sorted(Map.Entry.comparingByValue()).collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+
+        // Print the sorted Map in ascending order
+        System.out.println("Sorted Map (Ascending Order): " + sortedMapAsc);
+
+        // Sort the Map by values in descending order
+        Map<String, Integer> sorted = unsortedMap.entrySet().stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
+        // Print the sorted Map in descending order
+        System.out.println("Sorted Map (Descending Order): " + sorted);
+    }
+
+    static void sum(List<Student> list) {
+        int sum = list.stream().collect(Collectors.summingInt(Student::getAge));
+        System.out.println("sum: " + sum);
     }
 
     public static void main(String[] args) {
-        Map<String, String> map = new HashMap<>();
-        map.put("A", "Apple");
-        map.put("B", "Ball");
-        map.put("C", "Cat");
+        Map<String, Integer> map = new HashMap<>();
+        map.put("A", 1);
+        map.put("B", 2);
+        map.put("C", 3);
         iterateMapJava8(map);
         System.out.println(" ----------------- ");
         iterateMapJavaNorma(map);
 
-        List<Student> list=new ArrayList<>();
-        list.add(new Student(1,"A",12,"delhi"));
-        list.add(new Student(2,"B",13,"delhi"));
-        list.add(new Student(3,"C",14,"Pune"));
-        list.add(new Student(4,"D",15,"Pune"));
+        List<Student> list = new ArrayList<>();
+        list.add(new Student(1, "A", 12, "delhi"));
+        list.add(new Student(2, "B", 13, "delhi"));
+        list.add(new Student(3, "C", 14, "Pune"));
+        list.add(new Student(4, "D", 15, "Pune"));
 
-        System.out.println(" ----------------- ");
+      /*  System.out.println(" ----------------- ");
         grouping(list);
 
         System.out.println(" ----------------- map ");
@@ -62,21 +113,19 @@ public class Java8BasicQuestion {
         System.out.println(" ----------------- sum ");
         sum(list);
 
+
+        System.out.println(" ----------------- sort map using simple ");
+        sortByValue(map);*/
+
+
+        System.out.println(" ----------------- sort map using simple ");
+        sortByValue(map);
+
+
+        System.out.println(" ----------------- sort map using java 8 ");
+        sortMapBasedOnValue();
+
     }
 
 }
-class Student{
-    int id;
-    String name;
-    int age;
-    String address;
-    public Student(int id, String name, int age, String address){
-        this.id=id;
-        this.name=name;
-        this.age=age;
-        this.address=address;
-    }
-    String tostring(){
-        return "id: "+id+" name: "+name+" age: "+age+" address: "+address;
-    }
-}
+

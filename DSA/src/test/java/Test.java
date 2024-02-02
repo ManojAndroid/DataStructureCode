@@ -1,5 +1,14 @@
-public class GFG{
+public class Test {
     public static void main(String[] args) {
 
+
     }
+
 }
+
+
+
+
+
+
+

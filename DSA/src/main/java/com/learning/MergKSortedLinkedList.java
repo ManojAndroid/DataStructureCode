@@ -11,7 +11,9 @@ public class MergKSortedLinkedList {
         ListNode p = res;
 
         for (ListNode list : lists) {
-            pq.add(list);
+            if (list != null) {
+                pq.add(list);
+            }
         }
 
         while (!pq.isEmpty()) {
