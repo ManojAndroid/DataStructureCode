@@ -1,6 +1,6 @@
 package com.learning;
 
-public class MimimumCountToConvertAll0to1InMatrix {
+public class NoOfIslands {
     static int R;
     static int C;
 
