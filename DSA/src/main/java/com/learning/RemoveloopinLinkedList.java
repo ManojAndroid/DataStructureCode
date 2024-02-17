@@ -1,11 +1,12 @@
 package com.learning;
 
 import java.util.HashSet;
+import java.util.Set;
 
 public class RemoveloopinLinkedList {
-    public static void removeLoop(Node head){
-        HashSet<Node> s = new HashSet<Node>();
-        Node prev = null;
+    public static void removeLoop(NodeLinkedList head) {
+        Set<NodeLinkedList> s = new HashSet<>();
+        NodeLinkedList prev = null;
         while (head != null) {
             // If we have already has this node
             // in hashmap it means there is a cycle and we
@@ -13,7 +14,7 @@ public class RemoveloopinLinkedList {
             // the previous pointer with null.
 
             if (s.contains(head)) {
-              //  prev.next = null;
+                prev.next = null;
                 return;
             }
 
@@ -22,11 +23,21 @@ public class RemoveloopinLinkedList {
             else {
                 s.add(head);
                 prev = head;
-                //head = head.next;
+                head = head.next;
             }
         }
 
-        return ;
+        return;
+    }
+}
+
+class NodeLinkedList {
+    int data;
+    NodeLinkedList next;
+
+    public NodeLinkedList(int item) {
+        data = item;
+        next = null;
     }
 }
 

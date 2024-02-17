@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CheckAnagram {
 
-  //Time Complexity: O(n)
+  //Time Complexity: O(nlogn)
   // Auxiliary Space: O(256) i.e. O(1) for constant space.
 
   static int NO_OF_CHARS = 256;

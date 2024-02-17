@@ -8,7 +8,7 @@ public class KLargestAndSmallestElements {
     public static void KLargest(int [] arr,int n, int k){
         PriorityQueue<Integer> queue= new PriorityQueue<>();
         for(int i=0;i<n;i++){
-            queue.add(arr[i]);
+            queue.offer(arr[i]);
             if(queue.size()>k)
                 queue.poll();
         }
@@ -37,7 +37,7 @@ public class KLargestAndSmallestElements {
         // Function Call
         KLargest(a, n, k);
 
-        System.out.print(k + " Smallest elements are : ");
+        System.out.print("   "+k + " Smallest elements are : ");
         // Function Call
         KSmallest(a, n, k);
     }

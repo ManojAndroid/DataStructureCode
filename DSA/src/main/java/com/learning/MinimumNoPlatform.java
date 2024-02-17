@@ -3,7 +3,7 @@ package com.learning;
 import java.util.Arrays;
 
 public class MinimumNoPlatform {
-   /* Time Complexity: O(n2), Two nested loops traverse the array.
+   /* Time Complexity: O(nlogn), Two nested loops traverse the array.
     Auxiliary space: O(1), As no extra space is required.*/
     public static int minimumPlatform(int[] arr, int[] dep, int m) {
 
