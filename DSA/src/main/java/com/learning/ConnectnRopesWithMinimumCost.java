@@ -3,6 +3,9 @@ package com.learning;
 import java.util.PriorityQueue;
 
 public class ConnectnRopesWithMinimumCost {
+
+    /*Time Complexity: O(n log n)
+    Space Complexity: O(n)*/
     static long findMinCost(long  rope[], int n){
         if(rope==null|| rope.length==0){
             return 0;

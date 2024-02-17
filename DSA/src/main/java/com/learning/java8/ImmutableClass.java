@@ -15,7 +15,7 @@ public final class ImmutableClass {
         this.age = age;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 

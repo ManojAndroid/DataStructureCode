@@ -89,6 +89,18 @@ public class Java8BasicQuestion {
         System.out.println("sum: " + sum);
     }
 
+    static void printListOfUniqueHobbie(List<Student> studentList){
+
+        List<String> uniqueHobbie=studentList.stream().flatMap(student -> student.getHobbiesList().stream()).map(Hobbies::getHobbieName).collect(Collectors.toList());
+        System.out.println(uniqueHobbie);
+    }
+
+    static void arrayToStreamAndFilter()
+    {int [] arr={2,2,3,3,3,4,4,4};
+        List<Integer> filteredData=Arrays.stream(arr)
+                .filter(data->data==3).boxed()
+                .collect(Collectors.toList());}
+
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
         map.put("A", 1);
@@ -99,10 +111,21 @@ public class Java8BasicQuestion {
         iterateMapJavaNorma(map);
 
         List<Student> list = new ArrayList<>();
-        list.add(new Student(1, "A", 12, "delhi"));
-        list.add(new Student(2, "B", 13, "delhi"));
-        list.add(new Student(3, "C", 14, "Pune"));
-        list.add(new Student(4, "D", 15, "Pune"));
+        List<Hobbies> student1Addresss = new ArrayList<>();
+        student1Addresss.add(new Hobbies("cricket", "1"));
+        student1Addresss.add(new Hobbies("bollywball", "1"));
+
+        List<Hobbies> student2Addresss = new ArrayList<>();
+        student1Addresss.add(new Hobbies("cricket", "1"));
+        student1Addresss.add(new Hobbies("footbal", "1"));
+
+        List<Hobbies> student3Addresss = new ArrayList<>();
+        student1Addresss.add(new Hobbies("cricket", "1"));
+        student1Addresss.add(new Hobbies("footbal", "1"));
+
+        list.add(new Student(1, "A", 12, "delhi", student1Addresss));
+        list.add(new Student(2, "B", 13, "delhi", student2Addresss));
+        list.add(new Student(3, "C", 14, "Pune", student3Addresss));
 
       /*  System.out.println(" ----------------- ");
         grouping(list);
@@ -124,6 +147,10 @@ public class Java8BasicQuestion {
 
         System.out.println(" ----------------- sort map using java 8 ");
         sortMapBasedOnValue();
+
+
+        System.out.println("fetch filter");
+        printListOfUniqueHobbie(list);
 
     }
 

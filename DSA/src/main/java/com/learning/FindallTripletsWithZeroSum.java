@@ -13,7 +13,7 @@ public class FindallTripletsWithZeroSum {
     Auxiliary Space: O(n)
 */
 
-    public static  boolean findTriplets(int arr[] , int n)
+    public static  void findTriplets(int arr[] , int n)
     {
         for(int i=0; i<n-1;i++){
             Set<Integer> set=new HashSet<>();
@@ -30,12 +30,12 @@ public class FindallTripletsWithZeroSum {
                 }
             }
         }
-        return false;
+       // return false;
     }
 
     public static void main(String[] args) {
         int arr[] = { 0, -1, 2, -3, 1 };
         int n = arr.length;
-        System.out.println(findTriplets(arr, n));
+        findTriplets(arr, n);
     }
 }

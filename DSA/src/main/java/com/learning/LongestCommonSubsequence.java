@@ -23,9 +23,9 @@ public class LongestCommonSubsequence {
                 if (i == 0 || j == 0) {
                     dp[i][j] = 0;
                 } else if (X.charAt(i - 1) == Y.charAt(j - 1)) {
-                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                    dp[i][j] = dp[i - 1][j - 1] + 1;// pick previous digonal value +1
                 } else {
-                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
+                    dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);//pick max prev row or colum valure
                 }
             }
         }

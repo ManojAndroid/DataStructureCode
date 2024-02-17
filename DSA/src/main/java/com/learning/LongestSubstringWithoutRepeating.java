@@ -6,7 +6,7 @@ import java.util.Map;
 public class LongestSubstringWithoutRepeating {
 
     public static int lengthOfLongestSubstring(String s){
-        if (s == null || s.length() == 0) {
+        if (s == null || s.isEmpty()) {
             return 0;
         }
 
@@ -19,7 +19,7 @@ public class LongestSubstringWithoutRepeating {
 
             if (charIndexMap.containsKey(currentChar)) {
                 // Move the start pointer to the next position after the previous occurrence
-                start = Math.max(start, charIndexMap.get(currentChar) + 1);
+                start =charIndexMap.get(currentChar) + 1;
             }
 
             // Update the character index in the map
@@ -32,7 +32,7 @@ public class LongestSubstringWithoutRepeating {
         return maxLength;
     }
     public static void main(String[] args) {
-        String input = "abcabcbb";
+        String input = "pwwkew";
         int result = lengthOfLongestSubstring(input);
         System.out.println("Length of the longest substring without repeating characters: " + result);
     }
