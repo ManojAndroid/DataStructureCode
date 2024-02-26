@@ -3,7 +3,7 @@ package com.learning;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SmallestWindows1ContainsS2Substring {
+public class MinimumWindowSubstringVVI {
     // Smallest window in a String containing all characters of other String
     //https://www.youtube.com/watch?v=e1HlptlipB0
     //  Time Complexity: O(n)
@@ -46,7 +46,7 @@ public class SmallestWindows1ContainsS2Substring {
                 if (mapS1.getOrDefault(ch, 0) == 1) {
                     mapS1.remove(ch);
                 } else {
-                    mapS1.put(ch, mapS1.getOrDefault(ch, 0) + -1);
+                    mapS1.put(ch, mapS1.getOrDefault(ch, 0) -1);
                 }
                 if (mapS1.getOrDefault(ch, 0) < mapPat.getOrDefault(ch, 0)) {
                     mct--;
@@ -62,8 +62,8 @@ public class SmallestWindows1ContainsS2Substring {
     }
 
     public static void main(String[] args) {
-        String str1 = "this is a test string";
-        String pattern1 = "tist";
+        String str1 = "ADOBECODEBANC";
+        String pattern1 = "ABC";
         System.out.println(findMatchinSubstring(str1, pattern1));
 
         String str2 = "geeksforgeeks";

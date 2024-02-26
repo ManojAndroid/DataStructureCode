@@ -91,7 +91,7 @@ public class Java8BasicQuestion {
 
     static void printListOfUniqueHobbie(List<Student> studentList){
 
-        List<String> uniqueHobbie=studentList.stream().flatMap(student -> student.getHobbiesList().stream()).map(Hobbies::getHobbieName).collect(Collectors.toList());
+        List<String> uniqueHobbie=studentList.stream().flatMap(student -> student.getHobbiesList().stream()).map(Hobbies::getHobbieName).distinct().collect(Collectors.toList());
         System.out.println(uniqueHobbie);
     }
 
