@@ -12,7 +12,7 @@ public class NoOfIslands {
 
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
-                if (mat[i][j] == 0 && !visited[i][j]) {
+                if (mat[i][j] == 1 && !visited[i][j]) {
                     Dfs(mat, i, j, visited);
                     count++;
                 }

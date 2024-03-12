@@ -1,10 +1,10 @@
-package com.learning;
+package clientQuestion;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpiralMatrix {
-
+public class PrintSpiralMatrix {
+    //https://leetcode.com/problems/spiral-matrix/description/
     public static List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<>();
         int startR = 0, startC = 0;
@@ -39,8 +39,6 @@ public class SpiralMatrix {
     }
 
     public static void main(String[] args) {
-        int R = 4;
-        int C = 4;
         int a[][] = {{1, 2, 3, 4},
                 {5, 6, 7, 8},
                 {9, 10, 11, 12},
@@ -49,5 +47,4 @@ public class SpiralMatrix {
         // Function Call
         spiralOrder(a);
     }
-
 }

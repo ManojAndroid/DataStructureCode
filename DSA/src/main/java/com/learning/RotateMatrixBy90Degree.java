@@ -10,7 +10,7 @@ public class RotateMatrixBy90Degree {
 
         int R = matrix.length;
         int C = matrix[0].length;
-        //transpose matrix convert row int column and column onto row
+        //transpose matrix convert row int column and column into row
         for (int i = 0; i < R; i++) {
             for (int j = i + 1; j < C; j++) {
                 int temp = matrix[i][j];
