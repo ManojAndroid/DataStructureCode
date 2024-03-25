@@ -41,10 +41,38 @@ public class StockBuySelltoMaximizeProfit {
        return totalSum;
 
     }
+    //O(n)
+    private static  int maxForSingleDay(int [] prices){
+            int minPrice=prices[0];
+            int maxProfit=0;
+            for(int i=1;i<prices.length;i++)
+            {
+                maxProfit=Math.max(maxProfit,prices[i]-minPrice);
+                minPrice=Math.min(minPrice,prices[i]);
+            }
+            return maxProfit;
+
+    }
+    //O(n)
+    public static int maxProfit(int [] prices){
+        int profit = 0;
+        int buy = prices[0];
+        int days = prices.length;
+        for (int i = 1; i < days; i++) {
+            if (buy < prices[i])
+                profit += prices[i] - buy;
+            buy = prices[i];
+        }
+        return profit;
+    }
 
     public static void main(String[] args) {
         int arr[] = {100, 180, 260, 310, 40, 535, 695};
         System.out.println(maxProfit(arr, arr.length));
+        System.out.println("max profit for single day");
+        int ar1[] = {7,1,5,3,6,4};
+        //Output: 5
+        System.out.println(maxForSingleDay(ar1));
     }
 }
 

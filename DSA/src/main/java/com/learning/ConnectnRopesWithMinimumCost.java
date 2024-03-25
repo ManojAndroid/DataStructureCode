@@ -1,5 +1,6 @@
 package com.learning;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class ConnectnRopesWithMinimumCost {
@@ -10,7 +11,9 @@ public class ConnectnRopesWithMinimumCost {
         if(rope==null|| rope.length==0){
             return 0;
         }
-        PriorityQueue<Long> priorityQueue=new PriorityQueue<>();
+        PriorityQueue<Long> priorityQueue=new PriorityQueue<>();//natural asc order
+        //PriorityQueue<Long> priorityQueue=new PriorityQueue<>(Comparator.reverseOrder());//desc order
+
         for(long value:rope){
             priorityQueue.add(value);
         }

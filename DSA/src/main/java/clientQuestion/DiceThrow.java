@@ -1,6 +1,4 @@
-package com.learning;
-
-import java.util.Map;
+package clientQuestion;
 
 public class DiceThrow {
     //https://www.youtube.com/watch?v=nQw9gVaIjGo
@@ -8,7 +6,7 @@ public class DiceThrow {
     public static int numRollsToTarget(int n, int k, int target) {
         return solve(n, k, target);
     }
-
+    //O(k^N) in
     static int solve(int n, int k, int target) {
         if (target < 0)
             return 0;
@@ -40,8 +38,8 @@ public class DiceThrow {
         int n = 2;
         int k = 6;
         int target = 7;
-        //System.out.println(numRollsToTarget(n, k, target));
+        System.out.println(numRollsToTarget(n, k, target));
         System.out.println("using dp");
-        System.out.println("dp result: "+solveUsingDp(n,k,target));
+        //System.out.println("dp result: "+solveUsingDp(n,k,target));
     }
 }

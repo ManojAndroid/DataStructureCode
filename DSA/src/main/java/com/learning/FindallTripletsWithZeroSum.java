@@ -1,41 +1,57 @@
 package com.learning;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class FindallTripletsWithZeroSum {
-    /*Create a HashSet to store a unique element.
-    Run a nested loop with two loops, the outer loop from 0 to n-2 and the inner loop from i+1 to n-1
-    Check if the sum of ith and jth element multiplied with -1 is present in the HashSet or not
-    If the element is present in the HashSet, print the triplet else insert the jth element in the HashSet.*/
-
-   /* Time Complexity: O(n2)
-    Auxiliary Space: O(n)
+    /*Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
+    such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
 */
+    /*Complexity
+    Time complexity: O(N^log N)
+    Space complexity: O(N)*/
+    public static List<List<Integer>> findTriplets(int nums[]) {
+        Arrays.sort(nums);
+        List<List<Integer>> result = new ArrayList<>();
 
-    public static  void findTriplets(int arr[] , int n)
-    {
-        for(int i=0; i<n-1;i++){
-            Set<Integer> set=new HashSet<>();
-            for(int j=i+1;j<n;j++){
-                int temp=-(arr[i]+arr[j]);
+        for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
-                if(set.contains(temp))
-                {
-                    System.out.println("["+arr[i]+","+arr[j]+","+temp+"]");
-                    //return true;
-                }
-                else {
-                    set.add(arr[j]);
+            int st = i + 1;
+            int en = nums.length - 1;
+
+            while (st < en) {
+                int sum = nums[i] + nums[st] + nums[en];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[st], nums[en]));
+                    st++;
+                    en--;
+
+                    while (st < en && nums[st] == nums[st - 1]) {
+                        st++;
+                    }
+
+                    while (st < en && nums[en] == nums[en + 1]) {
+                        en--;
+                    }
+                } else if (sum < 0) {
+                    st++;
+                } else {
+                    en--;
                 }
             }
         }
-       // return false;
+
+        return result;
+
     }
 
     public static void main(String[] args) {
-        int arr[] = { 0, -1, 2, -3, 1 };
+        int arr[] = {0, -1, 2, -3, 1};
         int n = arr.length;
-        findTriplets(arr, n);
+        /*Input: nums = [-1,0,1,2,-1,-4]
+        Output: [[-1,-1,2],[-1,0,1]]*/
+        findTriplets(arr);
     }
 }
