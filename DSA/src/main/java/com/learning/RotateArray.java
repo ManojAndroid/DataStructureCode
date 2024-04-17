@@ -56,6 +56,7 @@ public class RotateArray {
         }
     }
     public static  int [] rotate(int[] nums, int k) {
+        // TC=O(n)
         int n=nums.length;
        // k = k % nums.length; // find reminder of k divided by nums.length because k is more than nums.length we don't need to iterate huge iterations.
         reverse(nums, 0, n-1);//reverse all

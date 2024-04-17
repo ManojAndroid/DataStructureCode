@@ -3,18 +3,16 @@ package com.learning.CompanyQuestion;
 public class StairWays {
     /* Time Complexity: O(n).
      Space Complexity: O(n).*/
-    static void countStairUsingstep123(int dist) {
-        int count[] = new int[dist + 1];
-        count[0] = 1;
-        if (dist >= 1)
-            count[1] = 1;
-        if (dist >= 2)
-            count[2] = 2;//remove for 1,2,
-        for (int i = 3; i <= dist; i++) {
-            count[i] = count[i - 1] + count[i - 2] + count[i - 3];
-            // result[i]=result[i-1]+result[i-2]; for two 1,2
+    static int countStairUsingstep12(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
         }
-        System.out.println(count[dist]);
+        int[] dp = new int[n+1];
+        dp[0] = dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+        return dp[n];
     }
 
     /*   Time Complexity : O(n)
@@ -34,8 +32,16 @@ public class StairWays {
 
         return ways[n % 3];
     }
+   //recursion
+    //exponential time complexity (O(2^n)) due to redundant calculations.
+    public int climbStairs(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return climbStairs(n-1) + climbStairs(n-2);
+    }
 
     public static void main(String[] args) {
-        countStairUsingstep123(4);
+        countStairUsingstep12(4);
     }
 }

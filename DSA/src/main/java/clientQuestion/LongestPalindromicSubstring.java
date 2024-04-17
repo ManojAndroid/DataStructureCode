@@ -1,6 +1,7 @@
 package clientQuestion;
 
 public class LongestPalindromicSubstring {
+    // O(n^2)
     public static String longestPalindrome(String s) {
 
         if (s.length() <= 1)
@@ -36,6 +37,6 @@ public class LongestPalindromicSubstring {
         System.out.println(str + "=" + longestPalindrome(str));
 
         String str1 = "cbbd";
-        System.out.println(str1 + "=" + longestPalindrome(str));
+        System.out.println(str1 + "=" + longestPalindrome(str1));
     }
 }

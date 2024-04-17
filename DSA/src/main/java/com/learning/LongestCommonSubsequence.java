@@ -18,7 +18,7 @@ public class LongestCommonSubsequence {
     static int lcs(String X, String Y, int m, int n) {
         int dp[][] = new int[m + 1][n + 1];
         // Following steps build L[m+1][n+1] in bottom up
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i <=m; i++) {
             for (int j = 0; j <= n; j++) {
                 if (i == 0 || j == 0) {
                     dp[i][j] = 0;

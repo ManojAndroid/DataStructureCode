@@ -25,7 +25,10 @@ public class SumOfConsecutiveHeights {
 //(n - i): The factor that represents the number of buildings remaining to climb after the current building. It decreases as Zapy climbs higher buildings.
 //So, by multiplying these factors, you get the contribution of the height of the building at index i to the total sum of all possible heights climbed consecutively.
 //
-//In the context of the entire loop, this formula is used for each building, and the results are accumulated to calculate the overall sum. The loop iterates through all buildings, and for each building, it adds up the contribution to the total sum.
+//In the context of the entire loop, this formula is used for each building,
+// and the results are accumulated to calculate the overall sum.
+// The loop iterates through all buildings, and for each building,
+// it adds up the contribution to the total sum.
   public static int sumOfConsecutiveHeights(int[] heights,int n) {
     int totalSum = 0;
 

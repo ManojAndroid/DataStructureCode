@@ -63,9 +63,7 @@ public class TopAndBottomOfTree {
                 queue.add(temp.right);
             }
         }
-        map.forEach((k, v) -> {
-            System.out.print(v + ",");
-        });
+        map.forEach((k, v) -> System.out.print(v + ","));
     }
 
     public static void main(String[] args) {

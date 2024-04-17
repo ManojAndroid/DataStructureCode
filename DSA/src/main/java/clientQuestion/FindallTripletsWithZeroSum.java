@@ -1,6 +1,7 @@
 package clientQuestion;
 
 import java.util.HashSet;
+import java.util.*;
 import java.util.Set;
 
 public class FindallTripletsWithZeroSum {
@@ -13,28 +14,58 @@ public class FindallTripletsWithZeroSum {
     Auxiliary Space: O(n)
 */
 
-    public static  void findTriplets(int arr[] , int n)
-    {
-        for(int i=0; i<n-1;i++){
-            Set<Integer> set=new HashSet<>();
-            for(int j=i+1;j<n;j++){
-                int temp=-(arr[i]+arr[j]);
+    public static void findTriplets(int arr[], int n) {
+        for (int i = 0; i < n - 1; i++) {
+            Set<Integer> set = new HashSet<>();
+            for (int j = i + 1; j < n; j++) {
+                int temp = -(arr[i] + arr[j]);
 
-                if(set.contains(temp))
-                {
-                    System.out.println("["+arr[i]+","+arr[j]+","+temp+"]");
+                if (set.contains(temp)) {
+                    System.out.println("[" + arr[i] + "," + arr[j] + "," + temp + "]");
                     //return true;
-                }
-                else {
+                } else {
                     set.add(arr[j]);
                 }
             }
         }
-       // return false;
+        // return false;
+    }
+
+
+    public List<List<Integer>> threeSum(int[] nums) {
+        Arrays.sort(nums);
+
+        List<List<Integer>> ans = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+            int start = i + 1;
+            int end = nums.length - 1;
+            while (start < end) {
+                int sum = nums[i] + nums[start] + nums[end];
+                if (sum == 0) {
+                    ans.add(Arrays.asList(nums[i], nums[start], nums[end]));
+                    end--;
+                    start++;
+                    while (start < end && nums[start] == nums[start - 1]) {
+                        start++;//remove duplicate from left side
+                    }
+                    while (start < end && nums[end] == nums[end + 1]) {
+                        end--;//remove duplicate from right side
+                    }
+                } else if (sum < 0) {
+                    start++;
+                } else {
+                    end--;
+                }
+            }
+
+        }
+        return ans;
     }
 
     public static void main(String[] args) {
-        int arr[] = { 0, -1, 2, -3, 1 };
+        int arr[] = {0, -1, 2, -3, 1};
         int n = arr.length;
         findTriplets(arr, n);
     }

@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 
 public class FormTheLargestNumberFromArray {
+    //tc=O(n log n)
     static String prontLargestNumber(Integer arr[]) {
         Arrays.sort(arr, (a, b) -> {
             // Concatenate both numbers in different orders
