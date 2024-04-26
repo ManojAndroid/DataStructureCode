@@ -1,5 +1,8 @@
 package com.learning;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ConvertDecimalToRoman {
     /* Time complexity: O(1)
      Space complexity: O(1)
@@ -19,6 +22,10 @@ public class ConvertDecimalToRoman {
     }
 
     public static void main(String[] args) {
-        System.out.println(decimalToRoman(2465));//MMCDLXV
+       // System.out.println(decimalToRoman(2465));//MMCDLXV
+
+        List<Integer> list= Arrays.asList(1,2,3,4,1);
+        //list.remove(1);
+        System.out.println(list);
     }
 }

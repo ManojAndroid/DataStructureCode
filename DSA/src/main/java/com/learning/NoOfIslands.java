@@ -36,7 +36,7 @@ public class NoOfIslands {
     }
 
     private static boolean isValid(int r, int c, int[][] mat, boolean[][] visited) {
-        return (r >= 0 && R > r && c >= 0 && C > c && mat[r][c] == 0 && !visited[r][c]);
+        return (r >= 0 && R > r && c >= 0 && C > c && mat[r][c] == 1 && !visited[r][c]);
     }
 
     public static void main(String[] args) {

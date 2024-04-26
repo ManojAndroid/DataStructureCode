@@ -28,8 +28,8 @@ public class FindMedianfromDataStream {
     }
 
     public double findMedian() {
-        int totalElementCount = leftMaxHeap.size() + rightMinHeap.size();
-        if (totalElementCount % 2 == 0) {
+        if (leftMaxHeap.size() ==rightMinHeap.size()) {// if both are equal means size
+            // of total is even
             return (leftMaxHeap.peek() + rightMinHeap.peek()) / 2.0;
         } else {
             return leftMaxHeap.peek();

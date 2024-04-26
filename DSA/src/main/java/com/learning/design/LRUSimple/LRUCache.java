@@ -7,6 +7,9 @@ public class LRUCache<K, V> extends LinkedHashMap<K, V> {
     private final int capacity;
 
     public LRUCache(int capacity) {
+        //initialCapacity – the initial capacity
+        // loadFactor – the load factor
+        // accessOrder – the ordering mode - true for access-order, false for insertion-order
         super(capacity, 0.75f, true);
         this.capacity = capacity;
     }
