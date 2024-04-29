@@ -77,4 +77,9 @@ public class GenericCache<K, V> implements IGenericCache<K, V> {
       this.createdAt = LocalDateTime.now();
     }
   }
+
+  public static void main(String[] args) {
+    GenericCache<Integer,Integer> genericCache=new GenericCache<>(100l);
+    genericCache.put(10,10);
+  }
 }
