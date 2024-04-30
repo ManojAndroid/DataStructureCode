@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31023db6-2e99-4e52-ae03-71f54d5234fd" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2d56LJyfPIhG3exYFysExqe9lux" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ATLSDEVDefferenceIMP.executor": "Run",
+    "Application.ATMRoomDriver.executor": "Run",
+    "Application.AddTwoNumberLinkedlist.executor": "Debug",
+    "Application.Anagram.executor": "Run",
+    "Application.BookMyShow.executor": "Run",
+    "Application.CheckIsIsomorphicStringOrNot.executor": "Run",
+    "Application.ConnectnRopesWithMinimumCost.executor": "Debug",
+    "Application.ContainerwithMostWater.executor": "Run",
+    "Application.ConvertDecimalToRoman.executor": "Run",
+    "Application.ConvertRomanToInt.executor": "Debug",
+    "Application.DiceThrow.executor": "Run",
+    "Application.EquilibriumPointOfTheArray.executor": "Run",
+    "Application.FindAllRootLeafPathBinaryTree.executor": "Run",
+    "Application.FormTheLargestNumberFromArray.executor": "Run",
+    "Application.GasStation.executor": "Run",
+    "Application.Java8BasicQuestion.executor": "Run",
+    "Application.Java8CodingQuestion.executor": "Run",
+    "Application.LRUCache.executor": "Run",
+    "Application.LevelOrderTraversal.executor": "Run",
+    "Application.LongestCommonSubsequence.executor": "Run",
+    "Application.LongestPalindromicSubstring.executor": "Run",
+    "Application.MagneticForceBetweenTwoBalls.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MergeTwoSortedArray.executor": "Debug",
+    "Application.MinimumSizeSubarraySum.executor": "Run",
+    "Application.MissingNumberFinder.executor": "Run",
+    "Application.NoOfIslands.executor": "Run",
+    "Application.PatternSearchingUsingZAlgorithm.executor": "Run",
+    "Application.PermutationsOfGivenString.executor": "Debug",
+    "Application.PlayGame.executor": "Run",
+    "Application.PrintFirstlargestAndFirstSmallet.executor": "Run",
+    "Application.ProductExceptSelf.executor": "Run",
+    "Application.ReduceArrayByDfference.executor": "Run",
+    "Application.RedundantBraces.executor": "Debug",
+    "Application.RemoveDeplicate.executor": "Run",
+    "Application.ReverseArrayInGroupOfKSize.executor": "Run",
+    "Application.ReverseOnlyAlphaCharacter.executor": "Run",
+    "Application.RotateArray.executor": "Run",
+    "Application.RottingOranges.executor": "Run",
+    "Application.RowWithMax1s.executor": "Run",
+    "Application.Subarraywith0sum.executor": "Debug",
+    "Application.SubsetSumProblem.executor": "Debug",
+    "Application.SummaryRanges.executor": "Debug",
+    "Application.Test.executor": "Run",
+    "Application.TreeMaxPathSum.executor": "Run",
+    "Application.UniquePathcountii.executor": "Debug",
+    "Application.WoodCuttingHeight.executor": "Run",
+    "Application.WordBreak.executor": "Debug",
+    "Application.ZeroSumSubarrays.executor": "Debug",
+    "Application.clientQuestion.DiceThrow.executor": "Run",
+    "Application.com.learning.LongestCommonSubsequence.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/manojprasad_singh/OneDrive - EPAM/Projects/DataStructureCode/DSA/src/main/java/com/learning/design",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\manojprasad_singh\OneDrive - EPAM\Projects\DataStructureCode\DSA\src\main\java\com\learning\design" />
+      <recent name="C:\Users\manojprasad_singh\OneDrive - EPAM\Projects\DataStructureCode\DSA\src\main\java\LLDDesign" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="clientQuestion" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.PlayGame">
+    <configuration name="ATMRoomDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LLDDesign.DesignATM.ATMStates.ATMRoomDriver" />
+      <module name="DsaPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LLDDesign.DesignATM.ATMStates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookMyShow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LLDDesign.DesignBookMyShow.BookMyShow" />
+      <module name="DsaPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LLDDesign.DesignBookMyShow.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LLDDesign.LLDSnakeLadder.Main" />
+      <module name="DsaPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LLDDesign.LLDSnakeLadder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LLDDesign.LLDSnakeLadder.PlayGame" />
+      <module name="DsaPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LLDDesign.LLDSnakeLadder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <module name="DsaPractice" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.PlayGame" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ATMRoomDriver" />
+        <item itemvalue="Application.BookMyShow" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31023db6-2e99-4e52-ae03-71f54d5234fd" name="Changes" comment="" />
+      <created>1709285536611</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709285536611</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/FormTheLargestNumberFromArray.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/FormTheLargestNumberFromArray.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/ConnectnRopesWithMinimumCost.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/ConnectnRopesWithMinimumCost.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/ConnectnRopesWithMinimumCost.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/LongestCommonSubsequence.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/dp/SubsetSumProblem.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/string/PermutationsOfGivenString.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/main/java/com/learning/ConvertDecimalToRoman.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/test/java/Test.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/DSA/src/test/java/Test.java</url>
+          <line>2</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/DSA/src/test/java/Test.java</url>
+          <line>3</line>
+          <properties class="Test" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
