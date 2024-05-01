@@ -1,8 +1,8 @@
 package LowLevelDesign.LLDCricbuzz.Team;
 
-import LowLevelDesign.LLDCricBuzz.Match.Inning.BallDetails;
-import LowLevelDesign.LLDCricBuzz.Match.Inning.OverDetails;
-import LowLevelDesign.LLDCricBuzz.Match.Team.Player.PlayerDetails;
+import LowLevelDesign.LLDCricbuzz.Inning.BallDetails;
+import LowLevelDesign.LLDCricbuzz.Inning.OverDetails;
+import LowLevelDesign.LLDCricbuzz.Team.Player.PlayerDetails;
 
 public class Wicket {
 

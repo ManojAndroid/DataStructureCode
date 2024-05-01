@@ -1,3 +1,4 @@
+/*
 package LLDTicTacToe;
 
 import LLDTicTacToe.Model.Board;
@@ -70,7 +71,7 @@ public class TicTacToeGame {
             }
             players.addLast(playerTurn);
 
-            boolean winner = isThereWinner(inputRow, inputColumn, playerTurn.playingPiece.pieceType);
+            boolean winner = true //isThereWinner(inputRow, inputColumn, playerTurn.playingPiece.pieceType);
             if(winner) {
                 return playerTurn.name;
             }
@@ -111,7 +112,7 @@ public class TicTacToeGame {
 
         //need to check anti-diagonals
         for(int i=0, j=gameBoard.size-1; i<gameBoard.size;i++,j--) {
-            if (gameBoard.board[i][j] == null || gameBoard.board[i][j].pieceType != pieceType) {
+            if (gameBoard.board[i][j] == null ){//.board[i][j].pieceType != pieceType) {
                 antiDiagonalMatch = false;
             }
         }
@@ -120,3 +121,4 @@ public class TicTacToeGame {
     }
 
 }
+*/
