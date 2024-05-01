@@ -1,9 +1,8 @@
 package LowLevelDesign.LLDCricbuzz;
-
-import LowLevelDesign.LLDCricBuzz.Match.Team.Player.Person;
-import LowLevelDesign.LLDCricBuzz.Match.Team.Player.PlayerDetails;
-import LowLevelDesign.LLDCricBuzz.Match.Team.Player.PlayerType;
-import LowLevelDesign.LLDCricBuzz.Match.Team.Team;
+import LowLevelDesign.LLDCricbuzz.Team.Player.Person;
+import LowLevelDesign.LLDCricbuzz.Team.Player.PlayerDetails;
+import LowLevelDesign.LLDCricbuzz.Team.Player.PlayerType;
+import LowLevelDesign.LLDCricbuzz.Team.Team;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
