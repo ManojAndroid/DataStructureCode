@@ -20,8 +20,8 @@ public class Java8CodingQuestion {
         System.out.println("sorted string : " +sorted);
     }
     static void find3rdLargestNumber(){
-        List<Integer> numbers=Arrays.asList(1,3,2,5,6,7,9);
-        Integer result=numbers.stream().sorted((a,b)->b.compareTo(a)).skip(2)
+        List<Integer> numbers=Arrays.asList(1,3,2,5,6,7,9,10);
+        Integer result=numbers.stream().sorted((a,b)->b-a).skip(2)
                 .findFirst().orElse(null);
         System.out.println("find3rdLargestNumber"+result);
     }
@@ -30,7 +30,7 @@ public class Java8CodingQuestion {
         //wordCounter();
         System.out.println("sort based on length");
         wordSort();
-        System.out.println("3 largest number");
+        System.out.println("3rd largest number");
         find3rdLargestNumber();
     }
 }
