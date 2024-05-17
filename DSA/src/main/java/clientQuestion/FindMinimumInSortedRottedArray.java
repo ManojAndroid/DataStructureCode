@@ -9,7 +9,7 @@ public class FindMinimumInSortedRottedArray {
 
         while (start < end) {
             int mid = start + (end - start) / 2;
-            if (nums[mid] == nums[end]) {// remember
+            if (nums[mid] == nums[end]) {// remember if there are duplicate no else remove this code
                 end--;
             } else if (nums[mid] > nums[end]) {// remember
                 start = mid + 1;

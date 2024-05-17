@@ -28,6 +28,17 @@ public class KLargestAndSmallestElements {
             System.out.print(data + ",");
         }
     }
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        for (int num : nums) {
+            pq.add(num);
+            if (pq.size() > k) {
+                pq.poll();
+            }
+        }
+        return pq.poll();
+
+    }
 
     public static void main(String[] args) {
         int a[] = { 11, 3, 2, 1, 15, 5, 4, 45, 88, 96, 50, 45 };
