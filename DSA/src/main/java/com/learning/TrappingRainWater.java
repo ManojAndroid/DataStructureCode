@@ -26,8 +26,31 @@ public class TrappingRainWater {
     System.out.println("water trapped: "+water);
 
   }
+  /* Time Complexity: O(n).
+  Only one traversal of the array is needed, So time Complexity is O(n).
+  Space Complexity: O(1).*/
+  public int trap(int[] height) {
+    int n = height.length;
+    int leftMax = height[0];
+    int rightMax = height[n - 1];
+    int l = 0;
+    int r = n - 1;
+    int ans = 0;
+    while (l < r) {
+      if (leftMax < rightMax) {
+        l++;
+        leftMax = Math.max(leftMax, height[l]);
+        ans += leftMax - height[l];
+      } else {
+        r--;
+        rightMax = Math.max(rightMax, height[r]);
+        ans += rightMax - height[r];
+      }
+    }
+    return ans;
+  }
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
     int arr[] = new int[]{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
     waterRainTrapping(arr, arr.length);
   }
