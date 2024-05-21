@@ -3,7 +3,7 @@ package clientQuestion;
 import java.util.Arrays;
 import java.util.TreeMap;
 
-public class MaximumProfitInJobScheduling {
+public class MaximumProfitInJobSchedulingVVI {
     //https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/
     // tc O(nlogn) and sc O(n)
     public static int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
