@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class TaskSchedulerVVI {
     //https://leetcode.com/problems/task-scheduler/
+    //https://www.youtube.com/watch?v=sTEPmlWBmJU
     public int leastInterval(char[] tasks, int n) {
         int[] freq = new int[26];
         for (char ch : tasks) {// 1 count frequency
