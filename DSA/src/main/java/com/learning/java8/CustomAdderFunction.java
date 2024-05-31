@@ -7,6 +7,9 @@ public class CustomAdderFunction {
         AddInteger addInteger= new AddInteger();
         System.out.println(addInteger.add(4,5));
         System.out.println(sum);
+        System.out.println("----- simple-");
+        AdderSimple adderSimple=(a,b)->a+b;
+        System.out.println(adderSimple.add(2,3));
     }
 }
 
@@ -21,6 +24,10 @@ class AddInteger implements Adder<Integer, Integer, Integer> {
     public Integer  add(Integer param1, Integer param2) {
         return param1 + param2;
     }
+}
+interface AdderSimple
+{
+    int add( int a,int b);
 }
 
 

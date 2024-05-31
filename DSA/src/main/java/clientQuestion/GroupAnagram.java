@@ -4,6 +4,8 @@ import java.util.*;
 
 public class GroupAnagram {
     //https://leetcode.com/problems/group-anagrams/description/
+    // time complexity is O(n * klogk).where k is the length of the longest string.
+    // space complexity is O(n * k).
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> mapList = new HashMap<>();
         for (String str : strs) {

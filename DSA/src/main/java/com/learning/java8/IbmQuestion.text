@@ -8,7 +8,7 @@ employeeList.stream().sorted(Comparator.comparing(Employee::getSalary).reversed(
 
 3) You have the below String, find number of occurance of each character using Java 8 Stream functions. Input: String s = "Welcome to the Java 8 world!";
 
-     Map<Characters,Integr> mapCharCount=s.tocharArray().chars().maptoObject(ch->(char)ch).groupingBy(char->char,Collectors.counting);
+     Map<Characters,Integr> mapCharCount=s.chars().maptoObject(ch->(char)ch).groupingBy(char->char,Collectors.counting);
 mapCharCount.forEach((
 
 
