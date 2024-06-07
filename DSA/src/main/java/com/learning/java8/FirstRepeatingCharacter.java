@@ -12,9 +12,18 @@ public class FirstRepeatingCharacter {
         Set<Character> set=new HashSet<>();
          Optional<Character> result=str.chars().mapToObj(c->(char)c).filter(cha->!set.add(cha)).findFirst();
         result.ifPresent(System.out::println);
+//or
+        Character firstRepa=str.chars().mapToObj(c->(char)c).filter(cha->!set.add(cha)).findFirst().orElse(null);
+        System.out.println(firstRepa);
     }
 
     public static char findFirstNonRepeatingCharacter(String str) {
+        /*char ans=str.chars().mapToObj(ch->(char)ch)
+                .collect(Collectors.groupingBy(Character::charValue,Collectors.counting()))
+                .entrySet().stream().filter(entry->entry.getValue()==1)
+                .map(Map.Entry::getKey)
+                .findFirst().orElse('\n');*/
+        //or
         // Use Java 8 streams to find the first non-repeating character
         Map<Character, Long> charCountMap = str.chars()
                 .mapToObj(c -> (char) c)

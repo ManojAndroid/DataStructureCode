@@ -15,8 +15,8 @@ public class CustomAdderFunction {
 
 
 @FunctionalInterface
-interface Adder<A, B, R> {
-    R add(A param1, B param2);
+interface Adder<R, P1, P2> {
+    R add(P1 param1, P2 param2);
 }
 
 class AddInteger implements Adder<Integer, Integer, Integer> {
