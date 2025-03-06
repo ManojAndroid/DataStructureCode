@@ -1,0 +1,113 @@
+Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+
+
+
+Example 1:
+
+Input: s = "Hello"
+Output: "hello"
+Example 2:
+
+Input: s = "here"
+Output: "here"
+Example 3:
+
+Input: s = "LOVELY"  'l','o','v,'e','l','y'
+Output: "lovely"
+
+public static String replaceUpperToLower(String str){
+    if(str.isEmpty()){
+        return str;
+    }
+    char [] charArray=str.toCharArray();
+     for(int i=0;i<str.length();i++)
+     {
+         char ch=charArray[i];
+         if(ch>='A' && ch<='Z'){
+             charArray[i]=(char)(ch+('a'-'A'));
+         }
+
+     }
+     return new String(charArray);
+}
+
+------------------------
+
+
+Given an integer K and an array, height[] where height[i] denotes the height of the ith tree in a forest.
+The task is to make a cut of height X from the ground such that exactly K unit wood is collected. If it is not possible,
+then print -1 else print X.
+
+Examples: Input: height[] = {1, 2, 1, 2}, K = 2 Output: 1  1,1,2,2  2-1   2-1/2= 1
+Input: height = {1, 1, 2, 2}, K = 1 Output: -1
+Input: height = {1, 1, 2, 2}, K = 6 Output:0
+Input: height = {5,100,111}, K = 33 Output: 89
+
+
+public static int woodCollected(int [] heights, int k){
+
+    int maxHeight=0;//2
+    for(int height:heights){
+        maxHeight=Math.max(maxHeight,height);
+    }
+    int low=0;
+    int ans=-1;
+
+    while(low<=maxHeight){
+        int cuttingHeight= low+(maxHeight-low)/2; 0+(2-0)/2=1
+        int collectedWood=collectWod(heights,cuttingHeight);
+        if(collectedWood==k){
+            ans=cuttingHeight;
+            return ans;
+        }
+        else if(collectedWood>k)
+        {
+          low=  cuttingHeight+1;
+        }
+        else{
+            maxHeight=cuttingHeight-1;
+        }
+    }
+    return ans;
+}
+
+private int collectWod(int int [] heights, int cuttingHeight){
+
+    int colectWood=0;0+1+0+1=2
+
+    for(int height: heigths){
+        colectWood=colectWood+Math.max(0,height-cuttingHeight);{1, 2, 1, 2}
+    }
+    return colectWood;
+}
+
+5,100,111
+
+111-0/2= 111/2 55/2  0+ k=33
+
+53
+low=0
+
+K = 33
+
+
+
+0 111
+0 111/2
+0 55/2
+
+low=27    hi=55   27+55= 82/2 41/
+
+low 27 hi 41   27+41 =8
+
+
+
+
+
+
+
+
+
+
+
+
