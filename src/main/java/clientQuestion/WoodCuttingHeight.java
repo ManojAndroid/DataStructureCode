@@ -26,7 +26,7 @@ public class WoodCuttingHeight {
                 result = mid;
                 left = mid + 1; // Search for higher cutting height
             } else {
-                right = mid; // Search for lower cutting height
+                right = mid-1; // Search for lower cutting height
             }
         }
 

@@ -5,7 +5,7 @@ public class MinimumJump {
    //tc O(n)
     //sc (1);
     // youtube link for ref  https://www.youtube.com/watch?v=9kyHYVxL4fw
-    public int jump(int[] nums) {
+    public static  int jump(int[] nums) {
         int jumpCount = 0;
         int coverage = 0;
         int destination = nums.length - 1;
@@ -35,6 +35,8 @@ public class MinimumJump {
                 Example 2:
         Input: nums = [2,3,0,1,4]
         Output: 2*/
+        int [] arr={2,3,1,1,4};
+        MinimumJump.jump(arr);
 
     }
 }

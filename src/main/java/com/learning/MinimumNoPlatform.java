@@ -9,7 +9,7 @@ public class MinimumNoPlatform {
 
         Arrays.sort(arr);
         Arrays.sort(dep);
-        int required = 1, platformNeed = 1;
+        int ans = 1, platformNeed = 1;
 
         int i = 1;
         int j = 0;
@@ -23,11 +23,11 @@ public class MinimumNoPlatform {
                 platformNeed--;
                 j++;
             }
-            if (platformNeed > required) {
-                required = platformNeed;
+            if (platformNeed > ans) {
+                ans = platformNeed;
             }
         }
-        return required;
+        return ans;
     }
 
     public static void main(String[] args) {

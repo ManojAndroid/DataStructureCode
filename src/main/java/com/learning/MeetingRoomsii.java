@@ -3,7 +3,7 @@ package com.learning;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-public class MeetingRooms {
+public class MeetingRoomsii {
     //https://www.youtube.com/watch?v=NKf1OJhEZj0
     //Time complexity (nlongn)
     public static int minMeetingRooms(TimeInterval[] intervals) {

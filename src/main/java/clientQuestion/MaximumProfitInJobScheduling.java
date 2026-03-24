@@ -5,19 +5,20 @@ import java.util.TreeMap;
 
 public class MaximumProfitInJobScheduling {
     //https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/
+    //https://www.youtube.com/watch?v=LL0tVxlAeV4
     // tc O(nlogn) and sc O(n)
     public static int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
-        int[][] jobs = new int[n][3];// create 2d and store start,end time ans profit
+        int[][] jobs = new int[n][3];// create 2d and store start,end time and profit
         for (int i = 0; i < n; i++) {
             jobs[i] = new int[]{startTime[i], endTime[i], profit[i]};
         }
-        Arrays.sort(jobs, (a, b) -> a[1] - b[1]);// sort based on endTime
+        Arrays.sort(jobs, (a, b) -> a[1] - b[1]);// sort based on endTime , we can use start time also
         TreeMap<Integer, Integer> dpMap = new TreeMap<>();
-        dpMap.put(0, 0);// base if job not started then profit will be 0
+        dpMap.put(0, 0);// time=0, profit=0// base if job not started then profit will be 0
 
         for (int[] job : jobs) {
-            int val = job[2] + dpMap.floorEntry(job[0]).getValue();// get prev floor value
+            int val = job[2] + dpMap.floorEntry(job[0]).getValue();// Find best previous job
             if (val > dpMap.lastEntry().getValue()) {// if val > than map las value then add in map
                 dpMap.put(job[1], val);// put entime with value
             }
